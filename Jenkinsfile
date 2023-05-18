@@ -36,17 +36,17 @@ pipeline {
                     url: 'https://github.com/aliahmadi4/test.git'
             }
         }
-        stage('clean') {
-            steps {
-                echo 'Clean...'
-                echo '${env.WORKSPACE}'
-//                 sh 'mvn clean'
-                sh './gradlew clean'
-            }
-        }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing...'
+//                 sh 'mvn clean'
+                sh './gradlew test'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                sh './gradlew assemble'
             }
         }
         stage('Report') {
