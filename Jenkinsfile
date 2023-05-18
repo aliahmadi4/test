@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'public.ecr.aws/docker/library/maven:latest' }
+        docker { image 'public.ecr.aws/docker/library/gradle:7.6.1-jdk17' }
     }
 //     tools {
 //         maven 'Maven-3.8.4'
