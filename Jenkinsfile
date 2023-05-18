@@ -1,7 +1,8 @@
 pipeline {
-    agent {
-        docker { image 'public.ecr.aws/docker/library/gradle:7.6.1-jdk17' }
-    }
+    agent any
+//     agent {
+//         docker { image 'public.ecr.aws/docker/library/gradle:7.6.1-jdk17' }
+//     }
 //     tools {
 //         maven 'Maven-3.8.4'
 //         gradle 'Gradle-7.6.1'
@@ -49,6 +50,12 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh './gradlew build'
+            }
+        }
+        stage('Dockerize...') {
+            steps {
+                echo 'Dockerizing....'
+                sh './gradlew docker'
             }
         }
         stage('Report') {
