@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        docker 'public.ecr.aws/docker/library/gradle:latest'
+    }
 //     tools {
 //         maven 'Maven-3.8.4'
 //         gradle 'Gradle-7.6.1'
