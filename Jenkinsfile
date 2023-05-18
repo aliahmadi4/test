@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        maven 'Maven-3.8.4'
+    }
     // this section configures Jenkins options
     options {
 
