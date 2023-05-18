@@ -31,6 +31,8 @@ pipeline {
                 echo 'Source...'
                 sh 'mvn --version'
                 sh 'git --version'
+                git branch: 'master'
+                    url: 'https://github.com/aliahmadi4/test.git'
             }
         }
         stage('Build') {
