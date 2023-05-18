@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'public.ecr.aws/amazoncorretto/amazoncorretto:17-al2023-jdk' }
+        docker { image 'public.ecr.aws/docker/library/maven:latest' }
     }
 //     tools {
 //         maven 'Maven-3.8.4'
@@ -32,7 +32,7 @@ pipeline {
         stage('Source') {
             steps {
                 echo 'Source...'
-                sh 'mvn --version'
+//                 sh 'mvn --version'
                 sh 'git --version'
                 git branch: 'master',
                     url: 'https://github.com/aliahmadi4/test.git'
