@@ -32,7 +32,7 @@ pipeline {
                 echo 'Source...'
 //                 sh 'mvn --version'
                 sh 'git --version'
-                git branch: 'master',
+                git branch: 'dev',
                     url: 'https://github.com/aliahmadi4/test.git'
             }
         }
