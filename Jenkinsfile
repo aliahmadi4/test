@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker 'public.ecr.aws/docker/library/gradle:latest'
+        docker 'public.ecr.aws/amazoncorretto/amazoncorretto:17-al2023-jdk'
     }
 //     tools {
 //         maven 'Maven-3.8.4'
