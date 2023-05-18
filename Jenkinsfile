@@ -30,6 +30,7 @@ pipeline {
             steps {
                 echo 'Source...'
                 sh 'mvn --version'
+                sh 'git --version'
             }
         }
         stage('Build') {
