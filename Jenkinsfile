@@ -24,9 +24,10 @@ pipeline {
 
     // the pipeline section we all know and love: stages! :D
     stages {
-        stage('Requirements') {
+        stage('Source') {
             steps {
-                echo 'Installing requirements...'
+                echo 'Source...'
+                sh 'mvn --version'
             }
         }
         stage('Build') {
