@@ -37,7 +37,9 @@ pipeline {
         }
         stage('clean') {
             steps {
-                echo 'Building..'
+                echo 'Clean...'
+                echo '${env.WORKSPACE}'
+                sh 'mvn clean'
             }
         }
         stage('Test') {
