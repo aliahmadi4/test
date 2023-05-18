@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven 'Maven-3.8.4'
+//         maven 'Maven-3.8.4'
     }
     // this section configures Jenkins options
     options {
@@ -39,7 +39,8 @@ pipeline {
             steps {
                 echo 'Clean...'
                 echo '${env.WORKSPACE}'
-                sh 'mvn clean'
+//                 sh 'mvn clean'
+                sh './gradlew clean'
             }
         }
         stage('Test') {
