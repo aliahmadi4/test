@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
 //         maven 'Maven-3.8.4'
-        gradlew 'Gradle-7.6.1'
+        gradle 'Gradle-7.6.1'
     }
     // this section configures Jenkins options
     options {
