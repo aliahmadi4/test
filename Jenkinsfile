@@ -32,7 +32,7 @@ pipeline {
                 echo 'Source...'
 //                 sh 'mvn --version'
                 sh 'git --version'
-                git branch: 'dev',
+                git branch: 'master',
                     url: 'https://github.com/aliahmadi4/test.git'
             }
         }
@@ -46,7 +46,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh './gradlew assemble'
+                sh './gradlew build'
             }
         }
         stage('Report') {
